@@ -405,8 +405,8 @@ class AggregatedAttribute(declared_attr):
 def local_condition(prop, objects):
     pairs = prop.local_remote_pairs
     if prop.secondary is not None:
-        parent_column = pairs[1][0]
-        fetched_column = pairs[1][0]
+        parent_column = pairs[-1][0]
+        fetched_column = pairs[-1][0]
     else:
         parent_column = pairs[0][0]
         fetched_column = pairs[0][1]
